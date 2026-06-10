@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazo | En Adopción</title>
+    <meta name="description" content="Lazo. Cada mascota merece un hogar. ♥︎">
+    <link rel="stylesheet" href="adopciones.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body>
+
+    <header>
+        <a class="boton3" href="index.html"> <img id="logoNav" src="img/logoNegro.png" alt="logo"> </a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="perdidos.html">Mascotas Perdidas</a>
+            <a href="adopciones.html" class="activo">En Adopción</a>
+            <a href="#">Comunidad</a>
+            <a href="#" id="sumate">¡Sumate!</a>
+        </nav>
+    </header>
+
+    <section id="principal">
+        <div class="textosSlide">
+            <h1>Cada mascota<br><span>merece un hogar</span></h1>
+        </div>
+    </section>
+
+    <section id="adopciones">
+
+        <h2>Mascotas en Adopción</h2>
+
+        <div class="filtros">
+
+            <div class="selects">
+                <div class="select">
+                    <label for="selectEspecie">Especie</label>
+                    <select name="especie" id="selectEspecie">
+                    </select> 
+                </div>
+                <div class="select">
+                    <label for="selectSexo">Sexo</label>
+                    <select name="sexo" id="selectSexo">
+                    </select>
+                </div>
+                <div class="select">
+                    <label for="selectLugar">Lugar</label>
+                    <select name="lugar" id="selectLugar">
+                    </select>
+                </div>
+            </div>
+
+            <button class="boton8" id="botonNuevaMascota">
+                Publicar Mascota
+            </button>
+
+            <div class="buscador">
+                <input type="text" id="inputBuscador">
+                <span id="buscador" class="material-symbols-rounded"> search </span>
+            </div>
+
+        </div>
+
+        <div id="contenedorArticlesAdopciones">
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Correo</a>
+        </div>
+
+        <p id="creditos">Hecho por Pilar Porcal Mackinnon :)</p>
+
+    </footer>
+
+    <div id="fondoOscuro">
+        <form id="formularioMascota">
+            <h2>Nueva Mascota</h2>
+
+            <div id="contenedorCamposFormulario">
+            </div>
+
+            <div class="botonesFormulario">
+                <button class="boton6" type="button" id="botonCancelar">
+                    Cancelar
+                </button>
+
+                <button class="boton7" type="button" id="guardarMascota">
+                    Guardar
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div id="fondoMensaje">
+        <div id="contenedorMensaje"></div>
+    </div>
+    
+    <script src="datos.js"></script>
+    <script src="adopciones.js"></script>
+
+</body>
+
+</html>

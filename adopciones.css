@@ -1,0 +1,540 @@
+/*///// Fuentes /////*/
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+/*///// ///// ///// /////*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    color: var(--texto);
+    font-weight: normal;
+}
+
+:root{
+    --primario: #FF6B57;
+    --primarioLight: #FFD3CC;
+    --primarioDark: #E44F3A;
+    --fondo: #ffffff;
+    --fondoDark: #fffbfb;
+    --texto: #252020;
+}
+
+
+/*///// Generales /////*/
+
+.mensajeError{
+    color: red;
+    font-size: 0.5em;
+    margin-top: -0.5em;
+}
+
+.error{
+    border: 1px solid red !important;
+}
+
+body{
+    font-family: "Mulish", sans-serif;
+    background-color: var(--fondo);
+}
+
+section{
+    padding: 6em 8em;
+}
+
+article img{
+    height: 22em;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5em;
+}
+
+#principal{
+    background:
+    radial-gradient(
+	    circle at bottom left,
+	    rgba(38, 27, 32, 0.75) 0%,
+	    rgba(38, 27, 32, 0.4) 35%,
+	    rgba(38, 27, 32, 0) 70%
+    ), url(https://images.unsplash.com/photo-1450778869180-41d0601e046e?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 50vh;
+}
+
+#principal div{
+    position: absolute;
+    bottom: 1em;
+}
+
+.descripcion{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.filtros{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    margin-bottom: 2em;
+}
+
+.selects{
+    display: flex;
+    gap: 3em;
+    justify-content: right;
+}
+
+.selects select{
+    padding: 0.2em;
+    background-color: var(--fondo);
+    border: none;
+    box-shadow: 4px 4px 12px #2323230d;
+    border-radius: 0.5em;
+    font-size: 1em;
+    
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.buscador{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+#buscador{
+    background-color: var(--primarioLight);
+    color: var(--primarioDark);
+    border-radius: 1em;
+    padding: 0.2em;
+}
+
+#inputBuscador{
+    background-color: var(--fondo);
+    box-shadow: 4px 4px 12px #2323230d;
+    font-size: 1em;
+    width: 30em;
+    border: none;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+}
+
+.contenedorBotones{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+
+/*///// Navegación /////*/
+
+header{
+    padding: 2em 8em;
+    background: var(--fondo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    box-shadow: 16px 0px 20px #23232319;
+}
+
+footer{
+    padding: 2em 8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    text-align: center;
+}
+
+footer div{
+    display: flex;
+    gap: 2em;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#sumate{
+    background-color: var(--primario);
+    padding: 0.5em 0.9em;
+    border-radius: 5em;
+    color: var(--fondo);
+    border: 1px solid var(--primario);
+    transition: 0.3s;
+}
+
+#sumate:hover{
+    background-color:rgba(255, 197, 207, 0);
+    color: var(--primario);
+    transition: 0.3s;
+}
+
+#logoNav{
+    height: 3em;
+    opacity: 80%;
+}
+
+.boton1{
+    padding: 0.8em 1em;
+    background-color: var(--primario);
+    color: var(--fondo);
+    border-radius: 5em;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+#flechita{
+    width: 0;
+    transition: 0.3s;
+    transform: translateX(-1em);
+    opacity: 0;
+    color: var(--primarioDark);
+}
+
+.boton1:hover{
+    background-color: var(--primarioLight);
+    color: var(--primarioDark);
+    transition: 0.3s;
+    gap: 1em;
+}
+
+.boton1:hover #flechita{
+    width: 20px;
+    transition: 0.3s;
+    transform: translateX(0);
+    opacity: 80%;
+}
+
+a:not(#sumate):not(.boton1):not(.boton3){
+    position: relative;
+}
+
+a:not(#sumate):not(.boton1):not(.boton3):not(.activo)::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1.5px;
+    background: currentColor;
+    opacity: 60%;
+    transition: 0.2s;
+}
+
+a:not(#sumate):not(.boton1):not(.boton3):not(.activo):hover::after{
+    width: 100%;
+    transition: 0.2s;
+}
+
+.activo::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1.5px;
+    background: currentColor;
+    opacity: 60%;
+    transition: 0.2s;
+}
+
+article a{
+    margin-top: 1em;
+    display: inline-block;
+    width: fit-content;
+    border-radius: 5em;
+    padding: 0.5em 0.9em;
+    background-color: var(--primarioLight);
+    color: var(--primarioDark);
+    border: 1px solid var(--primarioLight);
+    transition: 0.3s;
+}
+
+article a:hover:not(.boton4){
+    background-color: #a20f3900;
+    color: var(--primarioDark);
+    border: 1px solid var(--primarioDark);
+    transition: 0.3s;
+}
+
+.boton2{
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 2em;
+}
+
+#flechita2{
+    font-size: 20;
+    opacity: 80%;
+}
+
+.boton4{
+    background-color: #a20f3900;
+    border: none;
+    color: var(--primario);
+    padding: 0;
+    cursor: pointer;
+}
+
+.boton5{
+    background-color: var(--fondo);
+    border: none;
+    color: var(--primario);
+    border-radius: 50%;
+    box-shadow: 8px 8px 20px #23232319;
+    height: fit-content;
+    padding: 1em;
+    transition: 0.3s;
+    font-size: 1em;
+}
+
+.boton5:hover{
+    background-color: var(--primarioLight);
+    transition: 0.3s;
+}
+
+.boton6, .boton7, .boton8{
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 5em;
+    color: var(--fondo);
+    transition: 0.3s;
+    font-size: 1.1em;
+    font-weight: 100;
+}
+
+.boton7, .boton8{
+    background-color: var(--primario);
+    border: 1px solid var(--primario);
+}
+
+.boton6, .boton8:hover{
+    background-color: var(--primarioLight);
+    border: 1px solid var(--primarioLight);
+}
+
+.boton6:hover{
+    background-color: #00000000;
+    color: var(--primarioLight);
+    
+}
+
+.boton7:hover{
+    background-color: #00000000;
+    color: var(--primario); 
+}
+
+/*///// Tipografía /////*/
+
+h1{
+    font-size: 5.5em;
+    color: var(--fondo);
+    margin-bottom: 0.5em;
+    line-height: 1;
+}
+
+h1 span{
+    font-family: "Great Vibes", cursive;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--fondo);
+}
+
+#principal div h3{
+    color: var(--fondo);
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+h2{
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 2em;
+}
+
+article h3, #estadisticas h3{
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    text-align: left;
+}
+
+#estadisticas h3{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h3{
+    font-size: 3.5em;
+    text-align: right;
+    margin-bottom: 0.5em;
+    margin-right: 7em;
+    font-family: "Great Vibes", cursive;
+}
+
+footer p, footer a{
+    color: var(--primarioDark);
+}
+
+.lugar, .fecha{
+    text-align: right;
+    opacity: 60%;
+    margin-top: 0.2em;
+}
+
+.select label{
+    opacity: 50%;
+    color: var(--primarioDark);
+}
+
+.sinResultados{
+    color: var(--primario);
+    text-align: center;
+    grid-column: span 4;
+    padding: 3em 0;
+    font-size: 1.1em;
+}
+
+#formularioMascota h2{
+    font-size: 4.5em;
+    margin-bottom: 0.8em;
+    font-family: "Great Vibes", cursive;
+}
+
+
+/*///// Artículos /////*/
+
+#adopciones{
+    background-color: var(--fondoDark);
+}
+
+#contenedorArticlesAdopciones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+}
+
+#contenedorArticlesAdopciones article{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: var(--fondo);
+    border-radius: 1em;
+    box-shadow: 12px 12px 20px #2323230d;
+    padding: 1em;
+}
+
+/*///// Formulario /////*/
+
+#fondoOscuro{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #23232348;
+    justify-content: center;
+    align-items: center;
+    z-index: 20000;
+}
+
+#formularioMascota{
+    width: 48em;
+    max-height: 80vh;
+    overflow-y: auto;
+    background-color: var(--fondoDark);
+    padding: 4em 8em;
+    border-radius: 1em;
+}
+
+#contenedorCamposFormulario{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.botonesFormulario{
+    margin-top: 6em;
+    display: flex;
+    gap: 4em;
+    justify-content: right;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    font-size: 1.6em;
+}
+
+select, input, textarea{
+    background-color: var(--fondo);
+    border: none;
+    box-shadow: 4px 4px 12px #23232319;
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 0.6em;
+}
+
+textarea{
+    height: 6em;
+    font-family: "Mulish", sans-serif;
+}
+
+label{
+    font-size: 0.9em;
+}
+
+/*///// Mensaje! /////*/
+
+#fondoMensaje{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #23232348;
+    justify-content: center;
+    align-items: center;
+    z-index: 20000;
+}
+
+#contenedorMensaje{
+    background-color: var(--fondo);
+    padding: 4em;
+    border-radius: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+#contenedorMensaje h3{
+    margin: 0;
+    margin-right: 0.3em;
+    text-align: center;
+}

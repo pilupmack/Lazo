@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazo | Mascotas Perdidas</title>
+    <meta name="description" content="Lazo. Cada mascota merece volver a casa. ♥︎">
+    <link rel="stylesheet" href="perdidos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+
+<body>
+
+    <header>
+        <a class="boton3" href="index.html"> <img id="logoNav" src="img/logoNegro.png" alt="logo"> </a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="perdidos.html" class="activo">Mascotas Perdidas</a>
+            <a href="adopciones.html">En Adopción</a>
+            <a href="#">Comunidad</a>
+            <a href="#" id="sumate">¡Sumate!</a>
+        </nav>
+    </header>
+
+    <section id="principal">
+        <div class="textosSlide">
+            <h1>Cada mascota<br><span>merece volver a casa</span></h1>
+        </div>
+    </section>
+
+    <section id="perdidos">
+
+        <h2>Mascotas Perdidas</h2>
+
+        <div class="filtros">
+
+            <div class="selects">
+
+                <div class="select">
+                    <label for="selectOrden">Orden</label>
+                    <select name="orden" id="selectOrden">
+                    </select>
+                </div>
+                <div class="select">
+                    <label for="selectEspecie">Especie</label>
+                    <select name="especie" id="selectEspecie">
+                    </select> 
+                </div>
+                <div class="select">
+                    <label for="selectSexo">Sexo</label>
+                    <select name="sexo" id="selectSexo">
+                    </select>
+                </div>
+                <div class="select">
+                    <label for="selectUltimoLugar">Último Lugar</label>
+                    <select name="lugar" id="selectUltimoLugar">
+                    </select>
+                </div>
+            
+            </div>
+
+            <div class="buscador">
+                <input type="text" id="inputBuscador">
+                <span id="buscador" class="material-symbols-rounded"> search </span>
+            </div>
+
+        </div>
+
+        <div id="contenedorArticlesPerdidos">
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Correo</a>
+        </div>
+
+        <p id="creditos">Hecho por Pilar Porcal Mackinnon :)</p>
+
+    </footer>
+    
+    <script src="datos.js"></script>
+    <script src="perdidos.js"></script>
+
+</body>
+
+</html>
