@@ -483,7 +483,6 @@ footer p, footer a{
     gap: 2em;
     overflow-x: auto;
     padding: 1.5em 0;
-	transition: 1s;
 }
 
 #contenedorArticlesAdopciones article{
