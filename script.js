@@ -65,17 +65,6 @@ function volverAlInicio(){
     }
 }
 
-function moverDerecha(){
-    const anchoVisible = contenedorArticlesAdopciones.clientWidth
-    contenedorArticlesAdopciones.scrollLeft += anchoVisible
-}
-
-function moverIzquierda(){
-    const anchoVisible = contenedorArticlesAdopciones.clientWidth
-    contenedorArticlesAdopciones.scrollLeft -= anchoVisible
-
-}
-
 function iniciarAnimacion(entradas){
     if(entradas[0].isIntersecting && !yaSeAnimaron){
         yaSeAnimaron = true
@@ -164,6 +153,18 @@ function cargarBuscados(){
             </div>
         </article>`
     }
+}
+
+
+function moverDerecha(){
+    const anchoVisible = contenedorArticlesAdopciones.clientWidth
+    contenedorArticlesAdopciones.scrollLeft += anchoVisible
+}
+
+function moverIzquierda(){
+    const anchoVisible = contenedorArticlesAdopciones.clientWidth
+    contenedorArticlesAdopciones.scrollLeft -= anchoVisible
+
 }
 
 /* ////////////////////////////////////////////// */
