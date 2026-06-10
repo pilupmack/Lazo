@@ -85,7 +85,7 @@ De esta manera, Lazo no solo funcionaría como una herramienta de búsqueda y ad
 ### Enlaces
 
 - [**Repositorio**](https://github.com/pilupmack/Lazo)
-- [**Archivos del proyecto en Drive**]([https://drive.google.com/drive/u/1/folders/1GC7MgNqAf7FMunppHwu7iAyD_vD43W1n](https://drive.google.com/drive/folders/12l_ke0B5wbls91PT7d2MG67PMf5neLMP?usp=sharing))
+- [**Archivos del proyecto en Drive**]([https://drive.google.com/drive/u/1/folders/1GC7MgNqAf7FMunppHwu7iAyD_vD43W1n](https://drive.google.com/drive/folders/12l_ke0B5wbls91PT7d2MG67PMf5neLMP?usp=sharing)
 - [**Sitio web / Demo**](https://pilupmack.github.io/Lazo/)
 
 ---
